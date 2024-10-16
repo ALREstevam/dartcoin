@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Currency Chart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="header">
+      <div class="currency-icons">
+        <img src="images/currency1.svg" alt="Currency 1" class="currency-icon">
+        <img src="images/d1.webm" id='dart' alt="Currency 2" class="currency-icon currency-icon-overlay dart-icon">
+      </div>
+      <div class="text-info">
+        <h1>BRL to DRTC Live</h1>
+        <div id="currency-info">
+          <span id="emoji">➡️</span>
+          <span id="current-value">BRL/DRTC: 103.40</span>
+        </div>
+        <div class="about">
+          <p>Dart Coin (DRTC or DRT$) is a currency launched in 2024, it's indexed by the amount of mess Dart, the dog,
+            makes—typically, more mess means the value goes up compared to the real. Meanwhile, when we have a calm
+            Dart, the value tends to drop.</p>
+          <p>
+            Market events like "stole clothes from the laundry basket," "jumped on the table and grabbed food," or "took
+            something and is dodging everyone trying to catch it" are not uncommon, and they make this currency quite
+            volatile—some might even call it chaotic.</p>
+          <p>
+            Dart, who has a solid career of less than one year as a professional parkour puppy, decided to dive into the
+            currency exchange market and create his own currency.
+          </p>
+          <p>
+            The exchange from Dart Coin and BRL is managed by Dart himself, who backs it with various assets he's hiding
+            under the bed, like stolen socks, flip-flops, shoes, dog treats, and any random object he manages to bite.
+            These assets are overseen by the former fund supervisor, <a href="images/luke.png" target="_blank">Luke</a>, ex Samsung CEO.
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+    <canvas id="myLineChart"></canvas>
+
+    <div class="buttons-container">
+      <button class="action-button" id="calm-button" onclick="adjustBehaviourScore(15,20)">💤 Dormindo</button>
+      <button class="action-button" id="calm-button" onclick="adjustBehaviourScore(3,5)">🧘‍♂️ Tá calminho</button>
+      <button class="action-button" id="mess-button" onclick="adjustBehaviourScore(-1, -3)">🤯 Fez bagunça</button>
+      <button class="action-button" id="mess-button" onclick="adjustBehaviourScore(-2, -5)">🚨 Roubou</button>
+      <button class="action-button" id="mess-button" onclick="adjustBehaviourScore(-3, -5)">⚽ Driblou</button>
+      <button class="action-button" id="mess-button" onclick="adjustBehaviourScore(-5, -8)">🔥 Destruiu</button>
+      <button class="action-button" id="mess-button" onclick="adjustBehaviourScore(-8, -10)">🍽️ Roubou comida</button>
+      <button class="action-button" id="mess-button" onclick="adjustBehaviourScore(-2, -4)">🧻 Fez sujeira</button>
+      <button class="action-button" id="mess-button" onclick="adjustBehaviourScore(-2, -3)">🚽 Fez xixi no lugar
+        errado</button>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
